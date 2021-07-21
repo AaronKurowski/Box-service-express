@@ -10,4 +10,10 @@ module.exports = function(app) {
     .get(clothing.listAllClothing)
     .post(clothing.createNewClothing);
 
+
+    // put and delete
+    app
+    .route("/clothing/:id")
+    .put(clothing.updateClothing)
+    .delete(clothing.deleteClothing);
 };
