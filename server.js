@@ -1,6 +1,7 @@
 // require express and bodyParser
 const express = require("express");
 const bodyParser = require("body-parser"); // parses incoming json
+require("./config/db.js");
 
 const app = express(); // create express app
 
@@ -20,3 +21,6 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+var routes = require("./api/routes/clothingRoutes.js");
+routes(app);

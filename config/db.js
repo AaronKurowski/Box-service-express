@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // assign MongoDB connection string to URI and declare options settings
 var uri = `mongodb+srv://Aaron12342:${password}@box-service-cluster.a1kzm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
-// Declare a variable named option and assign optional settings
+// Declare a variable named options and assign optional settings
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
