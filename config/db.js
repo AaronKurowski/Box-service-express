@@ -1,8 +1,10 @@
+const password = require('../db_access/pass.js');
+
 // export mongoose
 const mongoose = require("mongoose");
 
 // assign MongoDB connection string to URI and declare options settings
-var uri = `mongodb+srv://Aaron12342:RrtrSca3SDHkY8R@box-service-cluster.a1kzm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+var uri = `mongodb+srv://Aaron12342:${password}@box-service-cluster.a1kzm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 // Declare a variable named option and assign optional settings
 const options = {
