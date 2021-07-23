@@ -20,20 +20,15 @@ const ClothingSchema = new Schema({
     },
     size: {
         type: Number,
-        required: true
+        required: false
     },
     datePackaged: {
         type: Date,
-        required: true,
+        required: false,
     },
     condition: {
         type: String,
         required: false
-    },
-    outForDelivery: {
-        type: Boolean,
-        required: true,
-        default: false
     }
 });
 

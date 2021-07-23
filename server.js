@@ -24,3 +24,6 @@ app.listen(port, () => {
 
 var routes = require("./api/routes/clothingRoutes.js");
 routes(app);
+
+var boxRoutes = require("./api/routes/boxRoutes");
+boxRoutes(app);
