@@ -16,21 +16,25 @@ const ClothingSchema = new Schema({
     },
     color: {
         type: String,
-        required: false
+        required: false,
+        default: null
     },
     size: {
         type: Number,
-        required: false
+        required: false,
+        default: null
     },
     datePackaged: {
         type: Date,
         required: false,
+        default: null
     },
     condition: {
         type: String,
-        required: false
+        required: false,
+        default: null
     }
 });
 
 // create and export model
-module.exports = mongoose.model("clothingModel", ClothingSchema);
+module.exports = mongoose.model("clothingSchema", ClothingSchema);

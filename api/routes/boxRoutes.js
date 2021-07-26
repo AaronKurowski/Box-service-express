@@ -6,4 +6,9 @@ module.exports = function(app) {
     .route("/box")
     .get(box.listAllBoxes)
     .post(box.createNewBox);
+
+    // update
+    app
+    .route("/box/:id")
+    .put(box.updateBox);
 }
