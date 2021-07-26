@@ -9,7 +9,8 @@ var uri = `mongodb+srv://Aaron12342:${password}@box-service-cluster.a1kzm.mongod
 // Declare a variable named options and assign optional settings
 const options = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 };
 
 // Connect MongoDB Atlas using mongoose connect method

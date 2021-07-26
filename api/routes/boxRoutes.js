@@ -10,5 +10,6 @@ module.exports = function(app) {
     // update
     app
     .route("/box/:id")
-    .put(box.updateBox);
+    .put(box.updateBox)
+    .delete(box.deleteBox);
 }
