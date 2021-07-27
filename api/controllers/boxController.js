@@ -30,7 +30,7 @@ exports.getBoxById = (req, res) => {
 
 // post
 exports.createNewBox = (req, res) => {
-    let newBox = new Boxes(req.body);
+    let newBox = new Box(req.body);
     newBox.save((err, box) => {
         if(err){
             res.status(500).send(err);

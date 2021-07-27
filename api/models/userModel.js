@@ -11,11 +11,12 @@ const UserSchema = new Schema({
 UserSchema.pre(save, function(next) {
     var user = this;
 
+    debugger;
     // only hash the password if it has been modified (or is new)
     if(!user.isModified('password')) return next();
 
     // generate a salt
-    bcrypt.genSalt(SALT_WORK_FACTOR), function(err, salt) {
+    bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
         if(err) return next(err);
 
         // hash the password using our new salt
@@ -26,7 +27,7 @@ UserSchema.pre(save, function(next) {
             user.password = hash;
             next();
         });
-    };
+    });
 });
 
 UserSchema.methods.comparePassword = function(candidatePassword, cb) {
@@ -36,4 +37,4 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
     });
 };
 
-module.exports = mongoose.model("userModel", UserSchema);
+module.exports = mongoose.model("userSchema", UserSchema);
